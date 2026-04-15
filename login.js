@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     // ✅ correct input
     errorMsg.classList.add("hidden");
 
-    alert("REGISTRATION SUCCESSFULLY ✅");
+    alert("LOGIN SUCCESSFULLY ✅");
 
     // redirect
     window.location.href = "index.html";
