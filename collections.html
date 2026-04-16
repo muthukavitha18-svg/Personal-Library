@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collections</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="collections.css">
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap">
+
+        <!-- Logo -->
+        <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
+            <img width="60" height="60" src="./assets/login logo.jpeg" alt="books" />
+            Personal Library 
+        </h1>
+
+        <!-- Mobile Menu Icon -->
+        <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden items-end cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25" />
+        </svg>
+
+        <!-- Menu -->
+        <ul class="hidden md:flex items-center gap-6 text-lg">
+
+            <li>
+                <a href="#" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Home <i class="fa-brands fa-houzz"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="collections.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Collection <i class="fa-solid fa-layer-group"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="mybooks.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    My Books <i class="fa-solid fa-book-bookmark"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Goals <i class="fa-solid fa-bullseye"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    </header>
+    <!-- COLLECTION HERO -->
+     <section>
+    <div class="collection-hero">
+        <div class="c-hero-overlay"></div>
+        <div class="c-hero-content">
+            
+            <div class="c-hero-textcontent">
+                <h1>Discover. Track. Grow.</h1>
+                <p>Explore books across genres and add them to your personal reading journey.</p>
+                <div class="c-searchBtn">
+                <input type="text" class="c-hero-inputbox" placeholder="Search by title or Author...">
+                <button class="c-hero-btn" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+    <!-- genre -->
+     <section>
+    <div class="genre-wrapper">
+        <p class="genre-label"> GENRE: </p>
+        <div class="genre-container">      
+        <button class="genre-btn">All</button>
+        <button class="genre-btn">Classic</button>
+        <button class="genre-btn">Self Help</button>
+        <button class="genre-btn">Fantasy</button>
+        <button class="genre-btn">Science</button>
+        <button class="genre-btn">Romance</button>
+        <button class="genre-btn">Thriller</button>
+        </div>
+    </div>
+    </section>
+    <div class="book-container" id="bookContainer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
