@@ -1,0 +1,173 @@
+/* hero */
+body {
+    font-family: Poppins;
+}
+
+.collection-hero {
+    background-image: url(assets/collectionherobg.jpg);
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.c-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.c-hero-content {
+    position: relative;
+    color: white;
+
+    padding: 50px;
+
+}
+
+.c-hero-textcontent {
+    margin-top: 20px;
+}
+
+.c-hero-content h1 {
+    font-weight: 700;
+    font-size: 70px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.c-hero-content p {
+
+    font-weight: 300;
+    max-width: 900px;
+    font-size: 30px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.c-hero-inputbox {
+    color: black;
+    padding: 5px 30px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+}
+
+.c-hero-btn {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.c-hero-btn:hover {
+    background-color: #e5e5e5;
+}
+
+/* ===== GENRE ===== */
+.genre-wrapper {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.genre-btn {
+    background-color: #60A5FA;
+    border-radius: 20px;
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+}
+.genre-btn:focus,
+.book-card button:focus {
+    outline: 2px solid #2563EB;
+}
+
+.genre-btn.active {
+    background-color: #2563EB;
+    color: white;
+}
+
+/* books list */
+.book-container {
+    display: grid;
+     justify-items: center; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card {
+    background: white;
+    max-width: 350px;
+
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover img {
+    transform: scale(1.08);
+}
+
+.book-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: gray;
+}
+
+.book-card button {
+    margin-top: 10px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .collection-hero {
+        min-height: 200px;
+    }
+
+    .c-hero-content {
+        padding: 20px;
+    }
+
+    .c-hero-content h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .c-hero-content p {
+        font-size: 16px;
+    }
+}

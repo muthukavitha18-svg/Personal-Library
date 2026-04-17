@@ -1,0 +1,123 @@
+
+
+.main{
+    background-color: #EFF6FF;
+     font-family: 'Nunito', sans-serif;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  
+}
+.left{
+   text-align: center;
+}
+
+.left img{
+    width: 400px;
+    height: 500px;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+.left p{
+    color: #1A3A7E;
+    font-weight: bold;
+    font-size: large;
+}
+/*right*/
+.right{
+    width: 100%;
+    max-width: 500px;
+}
+.right h1{
+    color: #2580F1;
+}
+
+
+/*textbox and labels*/
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.row {
+  display: flex;
+  gap: 15px;
+    margin-bottom: 10px;
+}
+
+.row .form-group {
+  flex: 1;
+   
+}
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+input {
+    width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+  background-color: #f0f6ff;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+.check input {
+  width: auto;
+}
+/*Button*/
+.btn{
+    background-color: #1E52DC;
+    color: white;
+      width: 100%;
+  padding: 14px;
+   border: none;
+  border-radius: 12px;
+   font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+   transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(47, 93, 224, 0.3);
+     margin-top: 10px;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(47, 93, 224, 0.4);
+}
+/*toggle*/
+
+.success{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.success.show{
+      opacity: 1;
+  transform: translateY(0);
+}
