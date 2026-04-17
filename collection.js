@@ -294,11 +294,22 @@ updateUI()
 
 let myLibrary = []
 
+function getLibrary() {
+  const stored = localStorage.getItem('myLibrary');
+  return stored ? JSON.parse(stored) : [];
+}
+
+
+function saveLibrary(booksArray) {
+  localStorage.setItem('myLibrary', JSON.stringify(booksArray));
+}
+
 function addToLibrary(book) {
-    const exists = myLibrary.some(b => b.title === book.title)
+  const library = getLibrary();
+    const exists = library.some(b => b.title === book.title)
 
     if (!exists) {
-        myLibrary.push(book)
+        Library.push(book)
         alert("Added to Library ✅")
     } else {
         alert("Already added ❌")
