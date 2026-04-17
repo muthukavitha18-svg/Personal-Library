@@ -19,11 +19,101 @@
 
 <body>
 
+    <style>
+        .book-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .book-card h3 {
+            padding: 15px 15px 5px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .book-card .author {
+            color: #667eea;
+            padding: 0 15px;
+            font-weight: 500;
+        }
+
+        .book-card .rating {
+            color: #ffc107;
+            padding: 8px 15px;
+        }
+
+        .book-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .remove-btn {
+            margin: 15px;
+            padding: 10px 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .remove-btn:hover {
+            background: #c82333;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-message h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .empty-message a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .empty-message a:hover {
+            background: #764ba2;
+        }
+    </style>
+
+    <!-- Navbar -->
     <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap">
 
         <!-- Logo -->
         <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
-            <img width="60" height="60" src="./image/login logo.jpeg" alt="books" />
+            <img width="60" height="60" src="./image/logo.jpeg" alt="books" />
             Personal Library
         </h1>
 
@@ -35,17 +125,17 @@
         </svg>
 
         <!-- Menu -->
-        <ul class="hidden md:flex items-center gap-6 text-lg">
+        <ul class="hidden md:flex items-center gap-3 text-lg">
 
             <li>
-                <a href="#"
+                <a href="home.html"
                     class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
                     Home <i class="fa-brands fa-houzz"></i>
                 </a>
             </li>
 
             <li>
-                <a href="#"
+                <a href="collections.html"
                     class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
                     Collection <i class="fa-solid fa-layer-group"></i>
                 </a>
@@ -53,42 +143,53 @@
 
             <li>
                 <a href="mybooks.html"
-                    class="hover:underline text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
                     My Books <i class="fa-solid fa-book-bookmark"></i>
                 </a>
             </li>
 
             <li>
-                <a href="#"
+                <a href="goals.html"
                     class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
                     Goals <i class="fa-solid fa-bullseye"></i>
                 </a>
             </li>
-
             <li>
-                <a href="#" class="size-4">
-                    <i class="fa-solid fa-circle-user fa-2xl" style="color: rgb(104, 119, 224); "></i>
+                <a href="feedback.html"
+                    class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Feedback <i class="fa-solid fa-bullseye"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="register.html"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
+                    Register
                 </a>
             </li>
 
         </ul>
     </nav>
-
     <!-- --------------------------------------------------------------------------- -->
-    <section>
-        <div class=" mt-4 gap-5 flex justify-center">
-            <div class="search_bar">
-                <!-- <input type="text" placeholder="search books" class="border border-black rounded-full pd-3 p-1"> -->
-                <!-- <button class="  border rounded-full p-1">Search</button> -->
-            </div>
-
+    <section style="margin-top: 40px; padding: 0 20px;">
+        <div id="emptyState" class="empty-message">
+            <h2>📚 Your Library is Empty!</h2>
+            <p>Start adding books from the Collection section</p>
+            <a href="collections.html">Go to Collections →</a>
         </div>
+
+        <div id="booksContainer" class="book-container"></div>
     </section>
 
 
 
     <!-- -------------------Under progress animation-start------------------- -->
-    <style>
+    <!-- <style>
         .container {
             text-align: center;
             animation: fadeIn 1s ease;
@@ -204,12 +305,67 @@
             <div class="progress-fill"></div>
         </div>
         <span>40% complete</span>
-    </section>
+    </section> -->
     <!-- -------------------Under progress animation-end------------------- -->
-
-
-
-
+<script>
+    // Get library from localStorage
+    function getLibrary() {
+        const stored = localStorage.getItem('myLibrary');
+        return stored ? JSON.parse(stored) : [];
+    }
+ 
+    // Save library to localStorage
+    function saveLibrary(booksArray) {
+        localStorage.setItem('myLibrary', JSON.stringify(booksArray));
+    }
+ 
+    // Display books from library
+    function displayLibrary() {
+        const library = getLibrary();
+        const container = document.getElementById('booksContainer');
+        const emptyState = document.getElementById('emptyState');
+ 
+        if (library.length === 0) {
+            container.innerHTML = '';
+            emptyState.style.display = 'block';
+            return;
+        }
+ 
+        emptyState.style.display = 'none';
+        container.innerHTML = '';
+ 
+        library.forEach(book => {
+            const card = document.createElement('div');
+            card.classList.add('book-card');
+ 
+            card.innerHTML = `
+                <img src="${book.image}" alt="${book.title}">
+                <h3>${book.title}</h3>
+                <p class="author">by ${book.author}</p>
+                <p class="rating">⭐⭐⭐⭐${book.rating}</p>
+                <button class="remove-btn" onclick="removeFromLibrary('${book.title}')">
+                    Remove from Library
+                </button>
+            `;
+ 
+            container.appendChild(card);
+        });
+    }
+ 
+    // Remove book from library
+    function removeFromLibrary(bookTitle) {
+        const library = getLibrary();
+        const filtered = library.filter(b => b.title !== bookTitle);
+        saveLibrary(filtered);
+        displayLibrary();
+        alert("✅ " + bookTitle + " removed!");
+    }
+ 
+    // Load library when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        displayLibrary();
+    });
+</script>
 
 
 </body>
