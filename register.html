@@ -6,10 +6,84 @@
   <title>Register</title>
   <!--Stylesheet Link-->
   <link rel="stylesheet" href="register.css">
-  
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--font awosome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--font link-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
+
+
 </head>
 <body class="main">
   
+  <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap bg-white">
+
+    <!-- Logo -->
+    <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
+        <img width="60" height="60" src="./image/logo.jpeg" alt="books" />
+        Personal Library 
+    </h1>
+
+    <!-- Mobile Menu Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" 
+        class="w-6 h-6 md:hidden cursor-pointer"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+
+    <!-- Menu -->
+    <ul class="hidden md:flex items-center gap-3 text-lg">
+
+        <li>
+            <a href="home.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                Home <i class="fa-brands fa-houzz"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="collections.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                Collection <i class="fa-solid fa-layer-group"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="mybooks.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                My Books <i class="fa-solid fa-book-bookmark"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="goals.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                Goals <i class="fa-solid fa-bullseye"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="feedback.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                Feedback
+            </a>
+        </li>
+
+        <li>
+            <a href="index.html"
+                class="bg-blue-400 text-white px-4 py-2 rounded-full hover:bg-gray-200 hover:text-black transition">
+                Login
+            </a>
+        </li>
+
+        <li>
+            <a href="register.html"
+                class="bg-blue-400 text-white px-4 py-2 rounded-full hover:bg-gray-200 hover:text-black transition">
+                Register
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
 <div class="card">
 
 <!--Left Side-->
