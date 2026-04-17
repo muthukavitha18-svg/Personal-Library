@@ -34,8 +34,14 @@
 .right h1{
     color: #2580F1;
 }
-
-
+.right a{
+    color: #2f5de0;
+  text-decoration: none;
+}
+a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
 /*textbox and labels*/
 .form-group {
   display: flex;
@@ -45,7 +51,7 @@
 .row {
   display: flex;
   gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .row .form-group {
