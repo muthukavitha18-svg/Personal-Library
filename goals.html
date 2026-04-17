@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading Goals - BookNest</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="goalsstyle.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="logo">📚 BookNest</div>
+      <div class="nav-links">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">Collection</a>
+        <a href="#" class="nav-item">My Books</a>
+        <a href="goals.html" class="nav-item active-tab">Goals</a>
+        <a href="#" class="nav-item">Logout</a>
+        <!-- <div class="profile-trigger nav-item">
+          <span class="avatar">K</span>
+          <span class="user-name">Kavi</span>
+        </div> -->
+      </div>
+    </nav>
+ 
+    <div class="hero-header">
+      <div class="hero-content">
+        <div class="breadcrumb">Home › Goals</div>
+        <h1>🎯 Reading Goals</h1>
+        <p>
+          Set your yearly target, track your progress, and earn achievements.
+        </p>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <div class="column-left">
+        <div class="card">
+          <div class="card-title">📌 Set Your Reading Goal</div>
+          <div class="goal-setter">
+            <label>Books to read this year:</label>
+            <input type="number" id="goalInput" value="5" />
+            <button class="btn-primary" onclick="saveGoal()">Save Goal</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">📊 Your Progress</div>
+          <div class="progress-info">
+            <span id="completedCount">2 completed</span>
+            <span id="goalTargetDisplay" class="text-muted">Goal: 5 books</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bg">
+              <div class="progress-fill" id="progressBar"></div>
+            </div>
+          </div>
+          <div class="progress-footer">
+            <span class="percentage-val" id="percentText">40%</span>
+            <span class="status-text">Making progress! 🚀</span>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <span class="val">7</span>
+              <span class="lbl">TOTAL</span>
+            </div>
+            <div class="stat-box">
+              <span class="val color-orange">2</span>
+              <span class="lbl">READING</span>
+            </div>
+            <div class="stat-box">
+              <span class="val color-green" id="doneCount">2</span>
+              <span class="lbl">DONE</span>
+            </div>
+          </div>
+
+          <button class="btn-complete" onclick="markCompleted()">
+            + Mark Book as Completed
+          </button>
+        </div>
+
+        <div class="card">
+          <div class="card-title">💡 Tips to Read More</div>
+          <ul class="tips-list">
+            <li>
+              <span>👨‍💻</span> Set aside 20 minutes every morning before checking
+              your phone.
+            </li>
+            <li>
+              <span>🎧</span> Try audiobooks during commutes — they count toward
+              your goal!
+            </li>
+            <li>
+              <span>📵</span> Replace 30 minutes of social media before bed with
+              a good book.
+            </li>
+            <li>
+              <span>🏆</span> Track every book you finish — seeing progress is
+              deeply motivating.
+            </li>
+            <li>
+              <span>👥</span> Join a book club for social accountability and new
+              recommendations.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column-right">
+        <div class="quote-card">
+          <div class="quote-stars">✨</div>
+          <blockquote>
+            "A reader lives a thousand lives before he dies."
+          </blockquote>
+          <cite>— GEORGE R.R. MARTIN</cite>
+          <button class="btn-quote">New Quote ↻</button>
+        </div>
+
+        <div class="card" style="margin-top: 20px">
+          <div class="card-title">🏅 Achievements</div>
+          <div class="badge-grid">
+            <div class="badge-item" id="badge-1">
+              🌱 <span>Sprout (1)</span>
+            </div>
+            <div class="badge-item" id="badge-5">🌸 <span>Bloom (5)</span></div>
+            <div class="badge-item" id="badge-10">
+              🌺 <span>Blossom (10)</span>
+            </div>
+            <div class="badge-item" id="badge-20">
+              📚 <span>Scholar (20)</span>
+            </div>
+            <div class="badge-item" id="badge-50">
+              🦋 <span>Spirit (50)</span>
+            </div>
+            <div class="badge-item" id="badge-goal">🎯 <span>Goal!</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast-popup">🎯 Goal saved! You can do it!</div>
+
+    <script src="goalsscript.js"></script>
+  </body>
+</html>
