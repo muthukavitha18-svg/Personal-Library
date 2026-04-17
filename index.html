@@ -2,137 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Personal Library </title>
-    <!--tailwind css-->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!--font awosome cdn link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--font link-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <title>Personal Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap">
 
-        <!-- Logo -->
-        <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
-            <img width="60" height="60" src="./image/logo.jpeg" alt="books" />
-            Personal Library 
-        </h1>
+  <!--Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">📚 Personal Library</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- ☰ Menu Button -->
 
-        <!-- Mobile Menu Icon -->
-        <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden items-end cursor-pointer">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25" />
-        </svg>
+    <ul id="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="mybooks.html"><i class="fa-solid fa-book"></i> My Books</a></li>
+      <li><a href="collection.html"><i class="fa-solid fa-layer-group"></i> Collection</a></li>
+      <li><a href="goals.html"><i class="fa-solid fa-bullseye"></i> Goals</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+    </ul>
+  </nav>
 
-        <!-- Menu -->
-        <ul class="hidden md:flex items-center gap-3 text-lg">
+  <!--Hero Section -->
+  <section class="hero">
+    <h1 id="welcome"></h1>
+    <p>Track, organize and manage your reading journey easily</p>
+    <button onclick="goToCollection()">Get Started</button>
+  </section>
 
-            <li>
-                <a href="home.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Home <i class="fa-brands fa-houzz"></i>
-                </a>
-            </li>
+  <!--Stats Section -->
+  <section class="stats">
 
-            <li>
-                <a href="collections.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Collection <i class="fa-solid fa-layer-group"></i>
-                </a>
-            </li>
+    <div class="card">
+      <h2 id="books">0</h2>
+      <p>Books in Library</p>
+    </div>
 
-            <li>
-                <a href="mybooks.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    My Books <i class="fa-solid fa-book-bookmark"></i>
-                </a>
-            </li>
+    <div class="card">
+      <h2 id="pages">0</h2>
+      <p>Total Pages</p>
+    </div>
 
-            <li>
-                <a href="goals.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Goals <i class="fa-solid fa-bullseye"></i>
-                </a>
-            </li>
-            <li>
-                <a href="feedback.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Feedback <i class="fa-solid fa-bullseye"></i>
-                </a>
-            </li>
-            <li>
-                <a href="index.html"
-                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
-                    Login
-                </a>
-            </li>
-            <li>
-                <a href="register.html"
-                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
-                    Register
-                </a>
-            </li>
+    <div class="card">
+      <h2 id="rating">0</h2>
+      <p>Avg Rating</p>
+    </div>
 
-        </ul>
-    </nav>
-    <!--content-->
-    <section class="flex items-center justify-center min-h-screen p-3">
+    <div class="card">
+      <h2 id="reading">0</h2>
+      <p>Currently Reading</p>
+    </div>
 
-        <div class="bg-blue-50 flex flex-col md:flex-row items-center rounded-sm justify-center p-5 gap-6 shadow-lg ">
+  </section>
 
-            <!-- Image -->
-            <img src="./image/book.jpg" class="w-full rounded-sm md:w-[450px] h-auto  opacity-120">
+  <!--Features Section -->
+  <section class="features">
+    <h2>Features</h2>
 
-            <!-- Form -->
-            <div class="p-5 md:p-8  w-full md:w-[400px]">
+    <div class="feature-box">
+      <div>Add & Manage Books</div>
+      <div>Track Reading Progress</div>
+      <div>Set Reading Goals</div>
+      <div>Filter & Search Books</div>
+    </div>
+  </section>
 
-                <span class="bg-sky-100 rounded-full p-2  text-sm">WELCOME BACK💗!</span>
+  <!--Recent Books -->
+  <section class="recent">
+    <h2>Recent Books</h2>
 
-                <h1 class="text-2xl md:text-3xl font-serif mt-3 text-blue-800">
-                    Login Personal Library
-                </h1>
+    <div class="books">
 
-                <p class="text-gray-500 mt-2 text-sm md:text-base">
-                    New here? <span class="text-blue-400"><a href="register.html">Create a free account</a></span>
-                </p>
+      <div class="book-card">
+        <h3>Deep Work</h3>
+        <p>Cal Newport</p>
+      </div>
 
-                <form id="loginForm" class=" mt-4 space-y-3">
+      <div class="book-card">
+        <h3>Atomic Habits</h3>
+        <p>James Clear</p>
+      </div>
 
-                    <div>
-                        <span id="errorMsg"
-                            class="bg-yellow-100 p-2 border-2 border-red-400  animate-bounce hidden rounded-sm text-sm  ">
-                            ⚠️ Email or password incorrect. Please try again
-                        </span><br>
+      <div class="book-card">
+        <h3>Rich Dad Poor Dad</h3>
+        <p>Robert Kiyosaki</p>
+      </div>
 
-                        <label class="text-lg mt-3 block">Email Address<i
-                            class="fa-solid ml-1 fa-envelope-circle-check" style="color: rgb(14, 1, 14);"></i></label>
+    </div>
+  </section>
 
-                        <input id="email" type="text" placeholder="example@gmail.com"
-                            class="border-2 border-neutral-300 outline-none p-2 w-full rounded hover:border-blue-800">
-                    </div>
+  <!--Footer -->
+  <footer>
+    <p>© 2026 Personal Library Manager</p>
+  </footer>
 
-                    <div>
-                        <label class="text-lg">Password</label><i class="fa-solid ml-1 fa-key"
-                            style="color: rgb(14, 1, 14);"></i><br>
-                        <input id="password" type="password" placeholder="Password must 6 digits"
-                            class="border-2 border-neutral-300 outline-none p-2 w-full rounded hover:border-blue-800">
-                    </div>
+  <script src="script.js"></script>
 
-                    <button class="bg-blue-400 text-white px-4 py-2  rounded w-full mt-2">
-                        Login ➝
-                    </button>
-
-                </form>
-            </div>
-
-        </div>
-    </section>
-    <!--js link-->
-    <script src="login.js"></script>
 </body>
 
 </html>
