@@ -12,28 +12,67 @@
   </head>
 
 <body>
+ <!--Common nav bar section-->
+    <nav>
+  <!-- Logo -->
+  
+  <a href="#" class="logo">
+     <img src="./image/logo.jpeg" alt="logo" height="50px" width="50px">
+    Personal Library
+  </a>
 
-  <!--Navbar-->
+  <!-- Nav Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="home.html" class="active" >
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L2 6v9h4v-4h4v4h4V6L8 1z"/></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <a href="collections.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 4h12v1.5H2zm1.5 3h9v1.5h-9zm2 3h5v1.5h-5z"/></svg>
+        Collection
+      </a>
+    </li>
+    <li>
+      <a href="mybooks.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2h8a1 1 0 011 1v12l-5-2.5L3 15V3a1 1 0 011-1z"/></svg>
+        My Books
+      </a>
+    </li>
+    <li>
+      <a href="goals.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>
+        Goals
+      </a>
+    </li>
+    <li>
+      <a href="feedback.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12v8H9l-3 3V11H2z"/></svg>
+        Feedback
+      </a>
+    </li>
+    <li>
+      <a href="index.html" >
+       Login
+      </a>
+    </li>
+    <li>
+      <a href="register.html" >
+        Register
+      </a>
+    </li>
+  </ul>
+
+</nav>
  
-  <nav class="navbar">
-    <h2 class="logo">📚 Personal Library</h2>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-     <!-- ☰ Menu Button -->
-
-    <ul id="nav-links">
-      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="mybooks.html"><i class="fa-solid fa-book"></i> My Books</a></li>
-      <li><a href="collection.html"><i class="fa-solid fa-layer-group"></i> Collection</a></li>
-      <li><a href="goals.html"><i class="fa-solid fa-bullseye"></i> Goals</a></li>
-      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-    </ul>
-  </nav>
 
   <!--Hero Section -->
   <section class="hero">
     <h1 id="welcome"></h1>
     <p>Track, organize and manage your reading journey easily</p>
-    <button onclick="goToCollection()">Get Started</button>
+    <button onclick="goTobooks()">Get Started</button>
   </section>
 
   <!--Stats Section -->

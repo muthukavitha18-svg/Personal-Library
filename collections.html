@@ -17,123 +17,62 @@
 </head>
 
 <body>
-   <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap bg-white">
+  
+   <!--Common nav bar section-->
+    <nav>
+  <!-- Logo -->
+  
+  <a href="#" class="logo">
+     <img src="./image/logo.jpeg" alt="logo" height="50px" width="50px">
+    Personal Library
+  </a>
 
-    <!-- Logo -->
-    <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
-        <img width="60" height="60" src="./image/logo.jpeg" alt="books" />
-        Personal Library 
-    </h1>
+  <!-- Nav Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="home.html" >
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L2 6v9h4v-4h4v4h4V6L8 1z"/></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <a href="collections.html" class="active">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 4h12v1.5H2zm1.5 3h9v1.5h-9zm2 3h5v1.5h-5z"/></svg>
+        Collection
+      </a>
+    </li>
+    <li>
+      <a href="mybooks.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2h8a1 1 0 011 1v12l-5-2.5L3 15V3a1 1 0 011-1z"/></svg>
+        My Books
+      </a>
+    </li>
+    <li>
+      <a href="goals.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>
+        Goals
+      </a>
+    </li>
+    <li>
+      <a href="feedback.html">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12v8H9l-3 3V11H2z"/></svg>
+        Feedback
+      </a>
+    </li>
+    <li>
+      <a href="index.html" >
+       Login
+      </a>
+    </li>
+    <li>
+      <a href="register.html" >
+        Register
+      </a>
+    </li>
+  </ul>
 
-    <!-- Mobile Menu Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" 
-        class="w-6 h-6 md:hidden cursor-pointer"
-        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-
-    <!-- Menu -->
-    <ul class="hidden md:flex items-center gap-3 text-lg">
-
-        <li>
-            <a href="home.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                Home <i class="fa-brands fa-houzz"></i>
-            </a>
-        </li>
-
-        <li>
-            <a href="collections.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                Collection <i class="fa-solid fa-layer-group"></i>
-            </a>
-        </li>
-
-        <li>
-            <a href="mybooks.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                My Books <i class="fa-solid fa-book-bookmark"></i>
-            </a>
-        </li>
-
-        <li>
-            <a href="goals.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                Goals <i class="fa-solid fa-bullseye"></i>
-            </a>
-        </li>
-
-        <li>
-            <a href="feedback.html" class="text-gray-400 hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                Feedback
-            </a>
-        </li>
-
-        <li>
-            <a href="index.html"
-                class="bg-blue-400 text-white px-4 py-2 rounded-full hover:bg-gray-200 hover:text-black transition">
-                Login
-            </a>
-        </li>
-
-        <li>
-            <a href="register.html"
-                class="bg-blue-400 text-white px-4 py-2 rounded-full hover:bg-gray-200 hover:text-black transition">
-                Register
-            </a>
-        </li>
-
-    </ul>
 </nav>
-    <!-- Navbar
-    <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap">
 
-        Logo
-         <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
-            <img width="60" height="60" src="./assets/login logo.jpeg" alt="books" />
-            Personal Library 
-        </h1> -->
-
-        <!-- Mobile Menu Icon
-        <svg   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden items-end cursor-pointer">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25" />
-        </svg> -->
-
-        <!-- Menu -->
-        <!-- <ul class="hidden md:flex items-center gap-6 text-lg">
-
-            <li>
-                <a href="#" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Home <i class="fa-brands fa-houzz"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="collections.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Collection <i class="fa-solid fa-layer-group"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="mybooks.html" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    My Books <i class="fa-solid fa-book-bookmark"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#" class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
-                    Goals <i class="fa-solid fa-bullseye"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="login.html"
-                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
-                    Login
-                </a>
-            </li>
-
-        </ul>
-    </nav>  -->
     <!-- COLLECTION HERO -->
   
     <div class="collection-hero">
