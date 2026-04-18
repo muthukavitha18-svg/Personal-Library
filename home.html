@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Library</title>
+  <link rel="stylesheet" href="homestyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+ 
+  </head>
+
+<body>
+
+  <!--Navbar-->
+ 
+  <nav class="navbar">
+    <h2 class="logo">📚 Personal Library</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+     <!-- ☰ Menu Button -->
+
+    <ul id="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="mybooks.html"><i class="fa-solid fa-book"></i> My Books</a></li>
+      <li><a href="collection.html"><i class="fa-solid fa-layer-group"></i> Collection</a></li>
+      <li><a href="goals.html"><i class="fa-solid fa-bullseye"></i> Goals</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+    </ul>
+  </nav>
+
+  <!--Hero Section -->
+  <section class="hero">
+    <h1 id="welcome"></h1>
+    <p>Track, organize and manage your reading journey easily</p>
+    <button onclick="goToCollection()">Get Started</button>
+  </section>
+
+  <!--Stats Section -->
+  <section class="stats">
+
+    <div class="card">
+      <h2 id="books">0</h2>
+      <p>Books in Library</p>
+    </div>
+
+    <div class="card">
+      <h2 id="pages">0</h2>
+      <p>Total Pages</p>
+    </div>
+
+    <div class="card">
+      <h2 id="rating">0</h2>
+      <p>Avg Rating</p>
+    </div>
+
+    <div class="card">
+      <h2 id="reading">0</h2>
+      <p>Currently Reading</p>
+    </div>
+
+  </section>
+
+  <!--Features Section -->
+  <section class="features">
+    <h2>Features</h2>
+
+    <div class="feature-box">
+      <div>Add & Manage Books</div>
+      <div>Track Reading Progress</div>
+      <div>Set Reading Goals</div>
+      <div>Filter & Search Books</div>
+    </div>
+  </section>
+
+  <!--Recent Books -->
+  <section class="recent">
+    <h2>Recent Books</h2>
+
+    <div class="books">
+
+      <div class="book-card">
+        <h3>Deep Work</h3>
+        <p>Cal Newport</p>
+      </div>
+
+      <div class="book-card">
+        <h3>Atomic Habits</h3>
+        <p>James Clear</p>
+      </div>
+
+      <div class="book-card">
+        <h3>Rich Dad Poor Dad</h3>
+        <p>Robert Kiyosaki</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Footer -->
+  <footer>
+    <p>© 2026 Personal Library Manager</p>
+  </footer>
+
+  <script src="homescript.js"></script>
+
+</body>
+
+</html>

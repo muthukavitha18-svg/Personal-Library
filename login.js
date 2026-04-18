@@ -14,10 +14,11 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     // ✅ correct input
     errorMsg.classList.add("hidden");
 
-    alert("REGISTRATION SUCCESSFULLY ✅");
+    window.location.href = "home.html";
+    //alert("REGISTRATION SUCCESSFULLY ✅");
 
     // redirect
-    window.location.href = "index.html";
+   // window.location.href = "index.html";
 
   } else {
 
