@@ -6,28 +6,88 @@
   <title>Personal Library</title>
   <link rel="stylesheet" href="homestyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
- 
-  </head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+  <!--tailwind css-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--font awosome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--font link-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
 
 <body>
 
   <!--Navbar-->
- 
-  <nav class="navbar">
-    <h2 class="logo">📚 Personal Library</h2>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-     <!-- ☰ Menu Button -->
+   <!-- Navbar -->
+    <nav class="flex items-center justify-between px-4 py-2 shadow-sm mt-1 flex-wrap">
 
-    <ul id="nav-links">
-      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="mybooks.html"><i class="fa-solid fa-book"></i> My Books</a></li>
-      <li><a href="collection.html"><i class="fa-solid fa-layer-group"></i> Collection</a></li>
-      <li><a href="goals.html"><i class="fa-solid fa-bullseye"></i> Goals</a></li>
-      <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
-    </ul>
-  </nav>
+        <!-- Logo -->
+        <h1 class="font-[Poppins] flex items-center font-bold text-lg md:text-3xl text-[#6877e0]">
+            <img width="60" height="60" src="./image/logo.jpeg" alt="books" />
+            Personal Library
+        </h1>
+
+        <!-- Mobile Menu Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden items-end cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25" />
+        </svg>
+
+        <!-- Menu -->
+        <ul class="hidden md:flex items-center gap-3 text-lg">
+
+            <li>
+                <a href="home.html"
+                    class="text-black hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Home <i class="fa-brands fa-houzz"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="collections.html"
+                    class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Collection <i class="fa-solid fa-layer-group"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="mybooks.html"
+                    class=" text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    My Books <i class="fa-solid fa-book-bookmark"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="goals.html"
+                    class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Goals <i class="fa-solid fa-bullseye"></i>
+                </a>
+            </li>
+            <li>
+                <a href="feedback.html"
+                    class="text-gray-400 hover:underline hover:text-black hover:bg-gray-200 px-3 py-2 rounded-full transition">
+                    Feedback <i class="fa-solid fa-bullseye"></i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="register.html"
+                    class="bg-blue-400 text-white px-4 py-2 rounded-full hover:underline hover:bg-gray-200 hover:text-black transition">
+                    Register
+                </a>
+            </li>
+
+        </ul>
+    </nav>
 
   <!--Hero Section -->
   <section class="hero">

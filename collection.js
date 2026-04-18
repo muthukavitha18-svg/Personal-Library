@@ -225,6 +225,17 @@ const books = [
 
 ]
 
+// ========== GET LIBRARY FROM STORAGE ==========
+function getLibrary() {
+  const stored = localStorage.getItem('myLibrary');
+  return stored ? JSON.parse(stored) : [];
+}
+
+// ========== SAVE LIBRARY TO STORAGE ==========
+function saveLibrary(booksArray) {
+  localStorage.setItem('myLibrary', JSON.stringify(booksArray));
+}
+
 const container = document.getElementById("bookContainer")
 
 function displayBooks(bookList) {
@@ -233,18 +244,25 @@ function displayBooks(bookList) {
   bookList.forEach(book => {
     const card = document.createElement("div")
     card.classList.add("book-card")
+    
+    // Check if book already in library
+    const library = getLibrary();
+    const isInLibrary = library.some(b => b.title === book.title);
 
     card.innerHTML = `
             <img src="${book.image}" alt="${book.title}">
             <h3>${book.title}</h3>
             <p>${book.author}</p>
             <p>⭐⭐⭐⭐${book.rating}</p>
-            <button  class="add-btn">Add to Library</button>
+            <button class="add-btn" ${isInLibrary ? 'disabled' : ''}>
+              ${isInLibrary ? '✓ Added to Library' : 'Add to Library'}
+            </button>
         `
     const btn = card.querySelector(".add-btn")
 
     btn.addEventListener("click", () => {
       addToLibrary(book)
+      displayBooks(getFilteredBooks())
     })
 
     container.appendChild(card)
@@ -285,35 +303,27 @@ buttons.forEach(btn => {
 
 const searchInput = document.querySelector(".c-hero-inputbox")
 
-searchInput.addEventListener("input", () => {
-  searchQuery = searchInput.value.toLowerCase()
-  updateUI()
-})
-
-updateUI()
-
-let myLibrary = []
-
-function getLibrary() {
-  const stored = localStorage.getItem('myLibrary');
-  return stored ? JSON.parse(stored) : [];
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    searchQuery = searchInput.value.toLowerCase()
+    updateUI()
+  })
 }
 
-
-function saveLibrary(booksArray) {
-  localStorage.setItem('myLibrary', JSON.stringify(booksArray));
-}
-
+// ========== ADD TO LIBRARY FUNCTION ==========
 function addToLibrary(book) {
-  const library = getLibrary();
+    const library = getLibrary();
     const exists = library.some(b => b.title === book.title)
 
     if (!exists) {
-        Library.push(book)
-        alert("Added to Library ✅")
+        library.push(book)
+        saveLibrary(library)
+        alert("✅ Added to Library")
     } else {
-        alert("Already added ❌")
+        alert("❌ Already added")
     }
 
-    console.log(myLibrary)
+    console.log(library)
 }
+
+updateUI()
