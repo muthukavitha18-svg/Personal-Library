@@ -15,6 +15,7 @@
     <!-- fontawesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>MyBooks</title>
+    <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
@@ -175,6 +176,35 @@
         .empty-message a:hover {
             background: #764ba2;
         }
+        @media (max-width: 768px) {
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+
+  /* Text size adjust */
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .right h1 {
+    font-size: 20px;
+  }
+}
     </style>
 
     <!--Common nav bar section-->
@@ -186,6 +216,10 @@
     Personal Library
   </a>
 
+  <!-- Hamburger Icon -->
+<div class="menu-toggle" id="menu-toggle">
+  ☰
+</div>
   <!-- Nav Links -->
   <ul class="nav-links">
     <li>
@@ -242,7 +276,7 @@
 
         <div id="booksContainer" class="book-container"></div>
     </section>
-
+<script src="nav.js"></script>
 <script>
     // Get library from localStorage
     function getLibrary() {

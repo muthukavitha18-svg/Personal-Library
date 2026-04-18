@@ -241,4 +241,36 @@ body{
     .c-hero-content p {
         font-size: 16px;
     }
+
+
+
+   
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+
+  /* Text size adjust */
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .right h1 {
+    font-size: 20px;
+  }
+
 }
