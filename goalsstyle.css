@@ -29,6 +29,7 @@ body {
       border-bottom: 1px solid #e0e4ef;
       position: sticky;
       top: 0px;
+        z-index: 1000;
     }
 
     /* Logo */
